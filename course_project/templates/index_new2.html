@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+
+        body {
+
+            background: linear-gradient(-60deg,
+            #ff6ec4, /* Pink */
+            #02AAB0, /* Teal */
+            #00CDAC, /* Lighter teal */
+            #ff6ec4, /* Pink, to loop back for a smooth transition */
+            #02AAB0 /* Teal, to match the beginning */
+            );
+            /* Set the background size larger than the element to allow for movement */
+            /* background-size: 2000% 2000%; */
+            background-size: 1000% 1000%;
+
+            /* Animate the background to move infinitely */
+            animation: psychedelicMove 10s linear infinite;
+        }
+
+        /* Define keyframes for the animation */
+        @keyframes psychedelicMove {
+            /* Move the background's position to create an endless loop effect */
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .custom-card {
+            background-color: rgba(55, 158, 255, 0.3);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            height: 330px;
+            margin-top: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .custom-card:hover {
+            background-color: rgba(55, 158, 255, 0.8);
+        }
+
+        .custom-card-emoji {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 180px;
+        }
+
+        .custom-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container psychedelic-background">
+    <div class="row">
+        {% for order in orders %}
+        <div class="col-4">
+            <div class="custom-card">
+                <div class="custom-card-emoji">🦩</div>
+                <div class="custom-card-content">
+                    <h3>{{ order.amount }}</h3>
+                    <h5>{{ order.description }}.</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
