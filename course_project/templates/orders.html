@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <style>
+    body {
+           background: linear-gradient(-60deg,
+            {#           #ff6ec4, /* Pink */#}
+            {##02AAB0, /* Teal */#}
+            {##00CDAC, /* Lighter teal */#}
+            {##ff6ec4, /* Pink, to loop back for a smooth transition */#}
+            {##02AAB0 /* Teal, to match the beginning */#}
+            {#);#}
+
+    #ff6ec4 0%,   /* Pink */
+    #ff6ec4 15%,  /* Pink */
+    #ff8e72 15%,  /* Peach */
+    #ff8e72 30%,  /* Peach */
+    #02AAB0 30%,  /* Teal */
+    #02AAB0 45%,  /* Teal */
+    #00CDAC 45%,  /* Lighter teal */
+    #00CDAC 60%,  /* Lighter teal */
+    #a1c4fd 60%,  /* Light Blue */
+    #a1c4fd 75%,  /* Light Blue */
+    #fbc2eb 75%,  /* Light Pink */
+    #fbc2eb 90%,  /* Light Pink */
+    #ff6ec4 90%,  /* Pink */
+    #ff6ec4 100%  /* Pink */
+);
+        background-size: 150% 150%;  /* Adjust size to cover the area better */
+    }
+
+    ul {
+      list-style: none;
+      padding: 10px 0;
+    }
+
+    li {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 8px;
+      margin-bottom: 25px;
+      padding: 15px;
+      cursor: pointer;
+
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    li:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.5s;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <ul class="orders-list">
+        {% for order in orders %}
+        <li>
+          <h4>{{ order.amount }}</h4>
+          <h6>{{ order.description }}.</h6>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+{#Я думаю там все ок, только в качестве импрувмента, я бы вынес общие стили, подключение либ в базовый шаблон.#}
+{#При наведении курсор менять на руку, cursor: pointer#}

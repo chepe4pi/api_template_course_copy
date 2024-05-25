@@ -53,6 +53,7 @@
 
         .custom-card:hover {
             background-color: rgba(55, 158, 255, 0.8);
+                            transition: 0.5s;
         }
 
         .custom-card-emoji {
@@ -75,13 +76,14 @@
 
 <div class="container psychedelic-background">
     <div class="row">
-        {% for order in orders %}
+        {% for product in products %}
         <div class="col-4">
             <div class="custom-card">
-                <div class="custom-card-emoji">🦩</div>
+                <div class="custom-card-emoji">
+                    {{ product.emoji }}
+                </div>
                 <div class="custom-card-content">
-                    <h3>{{ order.amount }}</h3>
-                    <h5>{{ order.description }}.</h5>
+                    <h3>{{ product.name }}</h3>
                 </div>
             </div>
         </div>
