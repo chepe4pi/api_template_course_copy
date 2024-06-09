@@ -67,9 +67,11 @@
       <ul class="orders-list">
         {% for order in orders %}
         <li>
-          <h4>{{ order.amount }}</h4>
-          <h6>{{ order.description }}.</h6>
-        </li>
+        <a href="order/{{ order.id }}/products" style="text-decoration: none; color: inherit;">
+            <h4>{{ order.amount }}$</h4>
+            <h6>{{ order.description }}.</h6>
+          </a>
+
         {% endfor %}
       </ul>
     </div>

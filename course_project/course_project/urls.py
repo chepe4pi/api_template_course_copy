@@ -21,7 +21,7 @@ from orders.views import orders_page, product_page, orders_page_new
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', orders_page),
-    path('products', product_page),
-    path('orders', orders_page_new),
+    path('orders_old', orders_page),
+    path('order/<int:order_id>/products', product_page),
+    path('', orders_page_new),
 ]

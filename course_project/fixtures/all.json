@@ -1,0 +1,94 @@
+[
+    { "model": "products.product", "pk": 1, "fields": { "name": "Rocket", "emoji": "🚀" } },
+    { "model": "products.product", "pk": 2, "fields": { "name": "Star", "emoji": "⭐️" } },
+    { "model": "products.product", "pk": 3, "fields": { "name": "Heart", "emoji": "❤️" } },
+    { "model": "products.product", "pk": 4, "fields": { "name": "Snowflake", "emoji": "❄️" } },
+    { "model": "products.product", "pk": 5, "fields": { "name": "Fire", "emoji": "🔥" } },
+    { "model": "products.product", "pk": 6, "fields": { "name": "Balloon", "emoji": "🎈" } },
+    { "model": "products.product", "pk": 7, "fields": { "name": "Pineapple", "emoji": "🍍" } },
+    { "model": "products.product", "pk": 8, "fields": { "name": "Sun", "emoji": "☀️" } },
+    { "model": "products.product", "pk": 9, "fields": { "name": "Moon", "emoji": "🌙" } },
+    { "model": "products.product", "pk": 10, "fields": { "name": "Umbrella", "emoji": "☂️" } },
+    { "model": "products.product", "pk": 11, "fields": { "name": "Anchor", "emoji": "⚓️" } },
+    { "model": "products.product", "pk": 12, "fields": { "name": "Guitar", "emoji": "🎸" } },
+    { "model": "products.product", "pk": 13, "fields": { "name": "Game Controller", "emoji": "🎮" } },
+    { "model": "products.product", "pk": 14, "fields": { "name": "Camera", "emoji": "📷" } },
+    { "model": "products.product", "pk": 15, "fields": { "name": "Checkered Flag", "emoji": "🏁" } },
+    { "model": "products.product", "pk": 16, "fields": { "name": "Crescent Moon", "emoji": "🌙" } },
+    { "model": "products.product", "pk": 17, "fields": { "name": "Lightning", "emoji": "⚡️" } },
+    { "model": "products.product", "pk": 18, "fields": { "name": "Rainbow", "emoji": "🌈" } },
+    { "model": "products.product", "pk": 19, "fields": { "name": "Globe", "emoji": "🌍" } },
+    { "model": "products.product", "pk": 20, "fields": { "name": "Football", "emoji": "⚽️" } },
+    { "model": "products.product", "pk": 21, "fields": { "name": "Bell", "emoji": "🔔" } },
+    { "model": "products.product", "pk": 22, "fields": { "name": "Bomb", "emoji": "💣" } },
+    { "model": "products.product", "pk": 23, "fields": { "name": "Gift", "emoji": "🎁" } },
+    { "model": "products.product", "pk": 24, "fields": { "name": "Diamond", "emoji": "💎" } },
+    { "model": "products.product", "pk": 25, "fields": { "name": "Music Note", "emoji": "🎵" } },
+    { "model": "products.product", "pk": 26, "fields": { "name": "Basketball", "emoji": "🏀" } },
+    { "model": "products.product", "pk": 27, "fields": { "name": "Soccer Ball", "emoji": "⚽️" } },
+    { "model": "products.product", "pk": 28, "fields": { "name": "Robot", "emoji": "🤖" } },
+    { "model": "products.product", "pk": 29, "fields": { "name": "Alien", "emoji": "👽" } },
+    { "model": "products.product", "pk": 30, "fields": { "name": "Rocket Ship", "emoji": "🚀" } },
+    
+    {
+        "model": "orders.order",
+        "pk": 1,
+        "fields": {
+            "amount": 120,
+            "description": "A stellar order with cosmic goodies",
+            "user": 1,
+            "products": [1, 2, 3, 4, 5, 6]
+        }
+    },
+    {
+        "model": "orders.order",
+        "pk": 2,
+        "fields": {
+            "amount": 240,
+            "description": "A fiery collection for adventurers",
+            "user": 1,
+            "products": [7, 8, 9, 10, 11, 12]
+        }
+    },
+    {
+        "model": "orders.order",
+        "pk": 3,
+        "fields": {
+            "amount": 150,
+            "description": "Musical and gaming gear bundle",
+            "user": 1,
+            "products": [13, 14, 15, 16, 17, 18]
+        }
+    },
+    {
+        "model": "orders.order",
+        "pk": 4,
+        "fields": {
+            "amount": 175,
+            "description": "A colorful and enlightening set",
+            "user": 1,
+            "products": [19, 20, 21, 22, 23, 24]
+        }
+    },
+    {
+        "model": "orders.order",
+        "pk": 5,
+        "fields": {
+            "amount": 200,
+            "description": "Sports and celebration pack",
+            "user": 1,
+            "products": [25, 26, 27, 28, 29, 30]
+        }
+    },
+    {
+        "model": "orders.order",
+        "pk": 6,
+        "fields": {
+            "amount": 220,
+            "description": "Mixed bag of fun and surprises",
+            "user": 1,
+            "products": [1, 7, 13, 19, 25, 30]
+        }
+    }
+]
+

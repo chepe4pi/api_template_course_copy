@@ -8,8 +8,8 @@ def orders_page(request):
     return render(request, 'index.html', {'orders': Order.objects.all()})
 
 
-def product_page(request):
-    return render(request, 'products.html', {'products': Product.objects.all()})
+def product_page(request, order_id):
+    return render(request, 'products.html', {'products': Product.objects.filter(order=order_id)})
 
 
 def orders_page_new(request):

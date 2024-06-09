@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+        }
+
+        .animated-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .animated-background::before,
+        .animated-background::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(-45deg,
+                #ff9a9e 0%,
+                #fad0c4 20%,
+                #fad0c4 20%,
+                #fad0c4 40%,
+                #a18cd1 40%,
+                #fbc2eb 60%,
+                #a1c4fd 60%,
+                #c2e9fb 80%,
+                #fbc2eb 80%,
+                #fad0c4 100%);
+            background-size: 400% 400%;
+            animation: gradientAnimation 30s ease infinite;
+            filter: blur(15px);
+            opacity: 0.6;  /* Lower opacity for blending */
+        }
+
+        .animated-background::after {
+            animation: gradientAnimationReverse 50s ease infinite;
+            opacity: 0.4;  /* Less opaque for more layers */
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientAnimationReverse {
+            0% { background-position: 100% 50%; }
+            50% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        {#.video-container {#}
+        {#    position: relative;#}
+        {#    z-index: 1;#}
+        {#    width: 80%;#}
+        {#    max-width: 1000px;#}
+        {#    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);#}
+        {#    background: rgba(255, 255, 255, 0.1);  /* Slight background for better contrast */#}
+        {#    backdrop-filter: blur(5px);  /* Adds blur to the background behind the video */#}
+        {#}#}
+
+        {#video {#}
+        {#    width: 100%;#}
+        {#    height: auto;#}
+        {#    display: block;#}
+        {#}#}
+
+    </style>
+</head>
+<body>
+    <div class="animated-background"></div>
+{#    <div class="video-container">#}
+{#        <video controls>#}
+{#            <source src="your-video.mp4" type="video/mp4">#}
+{#            Your browser does not support the video tag.#}
+{#        </video>#}
+{#    </div>#}
+</body>
+</html>
