@@ -1,1 +1,1 @@
-web: gunicorn course_project.course_project.wsgi
+web: gunicorn PYTHONPATH=course_project gunicorn course_project.wsgi
