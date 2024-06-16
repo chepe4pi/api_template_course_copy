@@ -13,3 +13,4 @@ class Order(models.Model):
 
 class TestModel(models.Model):
     amount = models.IntegerField()
+    description = models.CharField(max_length=255)
